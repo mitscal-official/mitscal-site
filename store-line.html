@@ -4,22 +4,22 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 
-<title>店舗無料掲載｜ミツカル公式LINE</title>
+<title>店舗無料登録・PR案件掲載｜ミツカル公式LINE</title>
 
 <link rel="canonical" href="https://www.mitscal.jp/store-line.html"/>
 
-<meta name="description" content="ミツカルへの店舗掲載は無料。登録料・掲載料・月額費用なし。公式LINEから店舗名・Instagram・紹介クリエイターのInstagramを送るだけで受付できます。"/>
+<meta name="description" content="ミツカルでは店舗登録・PR案件掲載が無料。さらに先行登録期間限定で、クリエイターとのマッチングまで無料でご利用いただけます。公式LINEから簡単に登録できます。"/>
 
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="ミツカル"/>
-<meta property="og:title" content="店舗様の無料掲載｜ミツカル"/>
-<meta property="og:description" content="登録・掲載・月額すべて無料。QRまたはボタンから公式LINEを追加して簡単受付。"/>
+<meta property="og:title" content="店舗登録・PR案件掲載無料｜ミツカル"/>
+<meta property="og:description" content="店舗登録・PR案件掲載無料。さらに先行登録期間限定でクリエイターとのマッチングまで無料。"/>
 <meta property="og:url" content="https://www.mitscal.jp/store-line.html"/>
 <meta property="og:image" content="https://www.mitscal.jp/assets/IMG_1933.PNG"/>
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="店舗様の無料掲載｜ミツカル"/>
-<meta name="twitter:description" content="登録・掲載・月額すべて無料。公式LINEから簡単受付。"/>
+<meta name="twitter:title" content="店舗登録・PR案件掲載無料｜ミツカル"/>
+<meta name="twitter:description" content="店舗登録・PR案件掲載無料。先行登録期間限定でクリエイターとのマッチングまで無料。"/>
 <meta name="twitter:image" content="https://www.mitscal.jp/assets/IMG_1933.PNG"/>
 
 <link href="assets/styles.css" rel="stylesheet"/>
@@ -45,11 +45,38 @@
   font-size:clamp(36px,7vw,58px);
   margin:16px auto;
   letter-spacing:-.05em;
+  line-height:1.12;
 }
 
 .store-card .lead{
-  margin:0 auto 28px;
+  max-width:680px;
+  margin:0 auto 22px;
   font-size:18px;
+  line-height:1.8;
+  color:var(--muted);
+}
+
+.free-message{
+  max-width:650px;
+  margin:24px auto 10px;
+  padding:20px 18px;
+  border-radius:22px;
+  background:#fff8db;
+  border:1px solid #f2dea0;
+}
+
+.free-message small{
+  display:block;
+  margin-bottom:6px;
+  color:#715d16;
+  font-weight:800;
+}
+
+.free-message strong{
+  display:block;
+  font-size:22px;
+  line-height:1.55;
+  letter-spacing:-.02em;
 }
 
 .free-badges{
@@ -57,21 +84,27 @@
   justify-content:center;
   gap:8px;
   flex-wrap:wrap;
-  margin:22px 0;
+  margin:18px 0 10px;
 }
 
 .free-badges span{
   padding:8px 13px;
   border-radius:999px;
-  background:#fff8db;
+  background:#fff;
   border:1px solid #f2dea0;
   font-weight:800;
   font-size:13px;
 }
 
+.period-note{
+  margin:8px 0 0;
+  font-size:12px;
+  color:#715d16;
+}
+
 .qr-box{
   width:min(280px,80vw);
-  margin:26px auto 16px;
+  margin:30px auto 16px;
   padding:14px;
   border:1px solid var(--line);
   border-radius:24px;
@@ -95,28 +128,87 @@
   color:#fff;
 }
 
-.howto{
-  max-width:620px;
-  margin:32px auto 0;
+.section-box{
+  max-width:680px;
+  margin:38px auto 0;
+  padding-top:34px;
+  border-top:1px solid var(--line);
   text-align:left;
-  padding:24px;
-  border-radius:22px;
+}
+
+.section-box h2{
+  margin:0 0 10px;
+  font-size:25px;
+  letter-spacing:-.03em;
+  text-align:center;
+}
+
+.section-lead{
+  margin:0 auto 20px;
+  text-align:center;
+  color:var(--muted);
+  line-height:1.75;
+}
+
+.flow{
+  display:grid;
+  gap:10px;
+}
+
+.flow-row{
+  display:grid;
+  grid-template-columns:48px 1fr;
+  gap:14px;
+  align-items:start;
+  padding:16px;
+  border:1px solid var(--line);
+  border-radius:18px;
   background:var(--bg);
+}
+
+.flow-icon{
+  width:42px;
+  height:42px;
+  border-radius:14px;
+  background:#fff8db;
+  border:1px solid #f2dea0;
+  display:grid;
+  place-items:center;
+  font-weight:900;
+}
+
+.flow-row b{
+  display:block;
+  margin:2px 0 5px;
+}
+
+.flow-row p{
+  margin:0;
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.65;
+}
+
+.safety-box{
+  max-width:680px;
+  margin:28px auto 0;
+  padding:20px;
+  text-align:left;
+  border-radius:20px;
+  background:#f8f9fb;
   border:1px solid var(--line);
 }
 
-.howto h2{
-  font-size:20px;
-  margin:0 0 12px;
+.safety-box b{
+  display:block;
+  margin-bottom:8px;
 }
 
-.howto ul{
+.safety-box p{
   margin:0;
-  padding-left:22px;
-}
-
-.howto li{
-  margin:7px 0;
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.75;
 }
 
 .small-note{
@@ -142,6 +234,14 @@
   .store-card .lead{
     font-size:16px;
   }
+
+  .free-message strong{
+    font-size:19px;
+  }
+
+  .section-box h2{
+    font-size:23px;
+  }
 }
 </style>
 </head>
@@ -150,6 +250,7 @@
 
 <header class="header">
   <div class="container nav">
+
     <a class="brand" href="index.html">
       <span class="brand-mark">
         <img alt="" src="assets/bee.svg"/>
@@ -160,16 +261,20 @@
     <div class="nav-actions">
       <a class="btn" href="https://www.mitscal.jp/">公式サイト</a>
     </div>
+
   </div>
 </header>
 
+
 <main class="store-wrap">
+
   <div class="container">
+
     <section class="store-card">
 
       <span class="eyebrow">
         <span class="eyebrow-dot"></span>
-        店舗様向け無料掲載
+        店舗様向け・先行登録受付中
       </span>
 
       <h1>
@@ -178,27 +283,51 @@
       </h1>
 
       <p class="lead">
-        ミツカルでは、クリエイターとのPR・コラボに興味のある店舗様を無料で掲載しています。
+        ミツカルは、店舗様とクリエイターを直接つなぐPRマッチングサービスです。
+        商品提供のみのPR案件から報酬あり案件まで、簡単に募集できます。
       </p>
 
-      <div class="free-badges">
-        <span>登録料 0円</span>
-        <span>掲載料 0円</span>
-        <span>月額 0円</span>
+
+      <div class="free-message">
+
+        <small>現在、先行登録期間限定</small>
+
+        <strong>
+          PR案件の掲載から<br/>
+          クリエイターとのマッチングまで無料
+        </strong>
+
+        <div class="free-badges">
+          <span>登録料 0円</span>
+          <span>案件掲載 0円</span>
+          <span>月額 0円</span>
+          <span>マッチング 0円※</span>
+        </div>
+
+        <p class="period-note">
+          ※マッチング無料は先行登録期間限定です。
+        </p>
+
       </div>
 
+
       <div class="qr-box">
+
         <img
           src="assets/IMG_1933.PNG"
           alt="ミツカル公式LINE 友だち追加QRコード"
         />
+
       </div>
+
 
       <p>
         <strong>
-          QRを読み取るか、下のボタンから公式LINEを追加してください。
+          まずはQRを読み取るか、下のボタンから<br/>
+          店舗様向け公式LINEを追加してください。
         </strong>
       </p>
+
 
       <a
         class="btn line-btn"
@@ -209,34 +338,145 @@
         ミツカル公式LINEを追加する
       </a>
 
-      <div class="howto">
-        <h2>LINE追加後、この3点をお送りください</h2>
 
-        <ul>
-          <li>店舗名</li>
-          <li>店舗Instagram URL（ない場合は「なし」でOK）</li>
-          <li>紹介してくれたクリエイターのInstagram URL</li>
-        </ul>
+      <div class="section-box">
+
+        <h2>LINE追加後の流れ</h2>
+
+        <p class="section-lead">
+          LINE追加後、簡単なフォームから店舗情報とPR案件をご登録いただけます。
+        </p>
+
+
+        <div class="flow">
+
+
+          <div class="flow-row">
+
+            <div class="flow-icon">01</div>
+
+            <div>
+              <b>店舗情報を無料登録</b>
+
+              <p>
+                店舗名・住所・Instagram・連絡先など、
+                簡単な店舗情報をご入力ください。
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="flow-row">
+
+            <div class="flow-icon">02</div>
+
+            <div>
+              <b>PR案件を無料掲載</b>
+
+              <p>
+                PRしてほしい商品・サービスや募集人数などを入力して、
+                クリエイターを募集できます。
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="flow-row">
+
+            <div class="flow-icon">03</div>
+
+            <div>
+              <b>クリエイターから応募</b>
+
+              <p>
+                掲載した案件に興味を持ったクリエイターから応募を受け付けます。
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="flow-row">
+
+            <div class="flow-icon">04</div>
+
+            <div>
+              <b>依頼したいクリエイターを選択</b>
+
+              <p>
+                応募があった場合も、必ず依頼する必要はありません。
+                PRをお願いしたいクリエイターを店舗様自身でお選びいただけます。
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="flow-row">
+
+            <div class="flow-icon">05</div>
+
+            <div>
+              <b>マッチング成立・PR実施</b>
+
+              <p>
+                マッチング成立後は、店舗様とクリエイターで直接やり取りを行い、
+                PRを実施していただきます。
+              </p>
+            </div>
+
+          </div>
+
+
+        </div>
+
       </div>
 
+
+      <div class="safety-box">
+
+        <b>応募があっても、依頼するかどうかは店舗様が決められます。</b>
+
+        <p>
+          案件を掲載したからといって、必ずクリエイターへPRを依頼する必要はありません。
+          応募内容やクリエイターのSNSをご確認いただき、
+          実際に依頼したい方がいた場合のみマッチングできます。
+        </p>
+
+      </div>
+
+
       <p class="small-note">
-        掲載後にPR希望が届いた場合も、実際にPRを受けるかどうかは店舗様ごとにその都度ご判断いただけます。
+        現在は先行登録期間のため、案件掲載からクリエイターとのマッチングまで無料でご利用いただけます。
       </p>
 
+
     </section>
+
   </div>
+
 </main>
 
+
 <footer class="footer" style="margin-top:40px">
+
   <div class="container">
+
     <div class="copyright">
+
       <span>© ミツカル</span>
+
       <span>
         <a href="privacy.html">プライバシーポリシー</a> ·
         <a href="terms.html">利用規約</a>
       </span>
+
     </div>
+
   </div>
+
 </footer>
 
 </body>
