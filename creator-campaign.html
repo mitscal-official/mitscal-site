@@ -253,9 +253,21 @@
   line-height:1.7
 }
 
+/* 下部CTA：黄色ボタン＋黒文字 */
 .bottom-cta .btn{
   width:min(460px,100%);
-  min-height:58px
+  min-height:58px;
+  background:#f6c945;
+  border:1px solid #f6c945;
+  color:#111827;
+  font-weight:900;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)
+}
+
+.bottom-cta .btn:hover{
+  background:#ffd65c;
+  border-color:#ffd65c;
+  color:#111827
 }
 
 @media(max-width:700px){
@@ -607,7 +619,7 @@
         </p>
 
         <a
-          class="btn btn-primary"
+          class="btn"
           href="https://www.mitscal.jp/store-line.html"
           target="_blank"
           rel="noopener noreferrer"
