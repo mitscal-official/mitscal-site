@@ -16,40 +16,12 @@
 
   <style>
     .projects-page{min-height:70vh}
-
-    .projects-simple-header{
-      padding:14px 0;
-      border-bottom:1px solid var(--line);
-      background:#fff
-    }
-
-    .projects-simple-header .brand{
-      display:inline-flex
-    }
-
-    .projects-head{
-      padding:58px 0 34px;
-      background:linear-gradient(180deg,#fff9df 0%,rgba(251,251,248,0) 100%)
-    }
-
-    .projects-head-inner{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap:32px
-    }
-
-    .projects-head h1{
-      font-size:clamp(38px,6vw,64px);
-      margin:18px 0 12px;
-      letter-spacing:-.055em
-    }
-
-    .projects-head p{
-      margin:0;
-      color:var(--muted);
-      font-size:17px
-    }
+    .projects-simple-header{padding:14px 0;border-bottom:1px solid var(--line);background:#fff}
+    .projects-simple-header .brand{display:inline-flex}
+    .projects-head{padding:58px 0 34px;background:linear-gradient(180deg,#fff9df 0%,rgba(251,251,248,0) 100%)}
+    .projects-head-inner{display:flex;align-items:flex-end;justify-content:space-between;gap:32px}
+    .projects-head h1{font-size:clamp(38px,6vw,64px);margin:18px 0 12px;letter-spacing:-.055em}
+    .projects-head p{margin:0;color:var(--muted);font-size:17px}
 
     .projects-count{
       display:flex;
@@ -62,21 +34,9 @@
       white-space:nowrap
     }
 
-    .projects-count strong{
-      font-size:34px;
-      line-height:1;
-      letter-spacing:-.05em
-    }
-
-    .projects-count span{
-      font-size:14px;
-      font-weight:800;
-      color:#6b5a20
-    }
-
-    .projects-list-section{
-      padding:22px 0 70px
-    }
+    .projects-count strong{font-size:34px;line-height:1;letter-spacing:-.05em}
+    .projects-count span{font-size:14px;font-weight:800;color:#6b5a20}
+    .projects-list-section{padding:22px 0 70px}
 
     .projects-notice{
       display:flex;
@@ -89,14 +49,123 @@
       background:#fff
     }
 
-    .projects-notice strong{
-      white-space:nowrap;
-      font-size:14px
+    .projects-notice strong{white-space:nowrap;font-size:14px}
+    .projects-notice span{color:var(--muted);font-size:13px}
+
+    .application-guide{
+      margin-bottom:26px;
+      padding:22px;
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:#fff;
+      box-shadow:0 10px 30px rgba(25,25,20,.04)
     }
 
-    .projects-notice span{
-      color:var(--muted);
+    .application-guide-head{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:18px
+    }
+
+    .application-guide-head h2{
+      margin:0;
+      font-size:20px;
+      letter-spacing:-.03em
+    }
+
+    .application-guide-head span{
+      color:#8a6b12;
+      font-size:12px;
+      font-weight:800
+    }
+
+    .application-steps{
+      display:grid;
+      grid-template-columns:repeat(6,minmax(0,1fr));
+      gap:10px;
+      margin:0;
+      padding:0;
+      list-style:none
+    }
+
+    .application-steps li{
+      position:relative;
+      min-width:0;
+      padding:14px 12px;
+      border-radius:16px;
+      background:#faf9f5
+    }
+
+    .application-step-number{
+      display:grid;
+      place-items:center;
+      width:26px;
+      height:26px;
+      margin-bottom:9px;
+      border-radius:50%;
+      background:#f4c928;
+      color:#181818;
+      font-size:12px;
+      font-weight:900
+    }
+
+    .application-steps strong{
+      display:block;
+      margin-bottom:4px;
       font-size:13px
+    }
+
+    .application-steps p{
+      margin:0;
+      color:var(--muted);
+      font-size:11px;
+      line-height:1.55
+    }
+
+    .application-rules{
+      margin-top:14px;
+      border:1px solid #eadca9;
+      border-radius:16px;
+      background:#fffdf5
+    }
+
+    .application-rules summary{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:14px 16px;
+      cursor:pointer;
+      color:#5e501f;
+      font-size:13px;
+      font-weight:800;
+      list-style:none
+    }
+
+    .application-rules summary::-webkit-details-marker{
+      display:none
+    }
+
+    .application-rules summary:after{
+      content:"＋";
+      font-size:18px;
+      line-height:1
+    }
+
+    .application-rules[open] summary:after{
+      content:"−"
+    }
+
+    .application-rules ul{
+      display:grid;
+      gap:7px;
+      margin:0;
+      padding:0 18px 16px 34px;
+      color:#5d5a52;
+      font-size:12px;
+      line-height:1.65
     }
 
     .projects-grid{
@@ -280,13 +349,15 @@
       font-size:18px
     }
 
-    .projects-footer{
-      margin-top:0
-    }
+    .projects-footer{margin-top:0}
 
     @media(max-width:900px){
       .projects-grid{
         grid-template-columns:repeat(2,minmax(0,1fr))
+      }
+
+      .application-steps{
+        grid-template-columns:repeat(3,minmax(0,1fr))
       }
     }
 
@@ -322,6 +393,26 @@
         align-items:flex-start;
         flex-direction:column;
         gap:4px
+      }
+
+      .application-guide{
+        padding:18px 14px;
+        border-radius:20px
+      }
+
+      .application-guide-head{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:4px
+      }
+
+      .application-steps{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:8px
+      }
+
+      .application-steps li{
+        padding:12px 10px
       }
 
       .project-image{
@@ -367,8 +458,68 @@
       <div class="container">
         <div class="projects-notice">
           <strong>応募前にご確認ください</strong>
-          <span>応募多数の場合は、店舗様による選考となります。</span>
+          <span>
+            応募した時点では採用確定ではありません。応募多数の場合は、店舗様による選考となります。
+          </span>
         </div>
+
+        <section class="application-guide" aria-labelledby="application-guide-title">
+          <div class="application-guide-head">
+            <h2 id="application-guide-title">応募から投稿まで</h2>
+            <span>採用後は店舗様と直接やり取り</span>
+          </div>
+
+          <ol class="application-steps">
+            <li>
+              <span class="application-step-number">1</span>
+              <strong>案件へ応募</strong>
+              <p>内容を確認してフォームから応募します。</p>
+            </li>
+
+            <li>
+              <span class="application-step-number">2</span>
+              <strong>店舗様が選考</strong>
+              <p>応募者の中から店舗様が選考します。</p>
+            </li>
+
+            <li>
+              <span class="application-step-number">3</span>
+              <strong>結果をご連絡</strong>
+              <p>ミツカル公式LINEから結果をお送りします。</p>
+            </li>
+
+            <li>
+              <span class="application-step-number">4</span>
+              <strong>日程を調整</strong>
+              <p>採用後は指定の方法で店舗様と直接調整します。</p>
+            </li>
+
+            <li>
+              <span class="application-step-number">5</span>
+              <strong>来店・投稿</strong>
+              <p>案件内容に沿って来店、撮影、投稿します。</p>
+            </li>
+
+            <li>
+              <span class="application-step-number">6</span>
+              <strong>完了報告</strong>
+              <p>投稿後に投稿URLをミツカルへ報告します。</p>
+            </li>
+          </ol>
+
+          <details class="application-rules">
+            <summary>応募・採用後の注意事項を確認する</summary>
+
+            <ul>
+              <li>採用のご連絡が届くまでは、店舗様への直接連絡はお控えください。</li>
+              <li>連絡方法や連絡先は採用時にご案内します。</li>
+              <li>採用後の日程調整は、店舗様と直接行っていただきます。</li>
+              <li>案件内容・提供内容・投稿条件を確認したうえでご応募ください。</li>
+              <li>変更やキャンセルが必要な場合は、店舗様とミツカルの両方へ速やかにご連絡ください。</li>
+              <li>投稿完了後は、必ず案件完了報告フォームをご提出ください。</li>
+            </ul>
+          </details>
+        </section>
 
         <div class="projects-grid" id="projects-grid" aria-live="polite">
           <div class="projects-message">
@@ -574,6 +725,7 @@
         addDetail(details, "募集締切", item["募集締切"]);
         addDetail(details, "来店条件", item["来店可能期間・曜日・時間"]);
         addDetail(details, "投稿", item["投稿形式"]);
+        addDetail(details, "採用後の連絡", item["採用後の連絡方法"]);
 
         const people = item["募集人数"]
           ? `${item["募集人数"].replace(/名$/, "")}名`
