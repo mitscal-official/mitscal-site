@@ -16,10 +16,40 @@
 
   <style>
     .projects-page{min-height:70vh}
-    .projects-head{padding:58px 0 34px;background:linear-gradient(180deg,#fff9df 0%,rgba(251,251,248,0) 100%)}
-    .projects-head-inner{display:flex;align-items:flex-end;justify-content:space-between;gap:32px}
-    .projects-head h1{font-size:clamp(38px,6vw,64px);margin:18px 0 12px;letter-spacing:-.055em}
-    .projects-head p{margin:0;color:var(--muted);font-size:17px}
+
+    .projects-simple-header{
+      padding:14px 0;
+      border-bottom:1px solid var(--line);
+      background:#fff
+    }
+
+    .projects-simple-header .brand{
+      display:inline-flex
+    }
+
+    .projects-head{
+      padding:58px 0 34px;
+      background:linear-gradient(180deg,#fff9df 0%,rgba(251,251,248,0) 100%)
+    }
+
+    .projects-head-inner{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:32px
+    }
+
+    .projects-head h1{
+      font-size:clamp(38px,6vw,64px);
+      margin:18px 0 12px;
+      letter-spacing:-.055em
+    }
+
+    .projects-head p{
+      margin:0;
+      color:var(--muted);
+      font-size:17px
+    }
 
     .projects-count{
       display:flex;
@@ -32,9 +62,21 @@
       white-space:nowrap
     }
 
-    .projects-count strong{font-size:34px;line-height:1;letter-spacing:-.05em}
-    .projects-count span{font-size:14px;font-weight:800;color:#6b5a20}
-    .projects-list-section{padding:22px 0 70px}
+    .projects-count strong{
+      font-size:34px;
+      line-height:1;
+      letter-spacing:-.05em
+    }
+
+    .projects-count span{
+      font-size:14px;
+      font-weight:800;
+      color:#6b5a20
+    }
+
+    .projects-list-section{
+      padding:22px 0 70px
+    }
 
     .projects-notice{
       display:flex;
@@ -47,9 +89,21 @@
       background:#fff
     }
 
-    .projects-notice strong{white-space:nowrap;font-size:14px}
-    .projects-notice span{color:var(--muted);font-size:13px}
-    .projects-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .projects-notice strong{
+      white-space:nowrap;
+      font-size:14px
+    }
+
+    .projects-notice span{
+      color:var(--muted);
+      font-size:13px
+    }
+
+    .projects-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:20px
+    }
 
     .project-card{
       display:flex;
@@ -61,8 +115,18 @@
       box-shadow:0 12px 36px rgba(25,25,20,.055)
     }
 
-    .project-image{height:210px;position:relative;overflow:hidden}
-    .project-image-photo img{width:100%;height:100%;object-fit:cover;object-position:center}
+    .project-image{
+      height:210px;
+      position:relative;
+      overflow:hidden
+    }
+
+    .project-image-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center
+    }
 
     .project-status{
       position:absolute;
@@ -111,12 +175,46 @@
       line-height:1
     }
 
-    .project-image-brand small{font-size:11px;font-weight:800;letter-spacing:.12em}
-    .project-body{display:flex;flex:1;flex-direction:column;padding:22px}
-    .project-id{font-size:12px;font-weight:800;color:#8c887f;letter-spacing:.04em}
-    .project-body h2{font-size:22px;line-height:1.35;margin:7px 0 2px;letter-spacing:-.03em}
-    .project-title{margin:0 0 18px;color:#4f4c46;font-size:14px;font-weight:700}
-    .project-details{display:grid;gap:0;margin:0 0 16px;border-top:1px solid var(--line)}
+    .project-image-brand small{
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.12em
+    }
+
+    .project-body{
+      display:flex;
+      flex:1;
+      flex-direction:column;
+      padding:22px
+    }
+
+    .project-id{
+      font-size:12px;
+      font-weight:800;
+      color:#8c887f;
+      letter-spacing:.04em
+    }
+
+    .project-body h2{
+      font-size:22px;
+      line-height:1.35;
+      margin:7px 0 2px;
+      letter-spacing:-.03em
+    }
+
+    .project-title{
+      margin:0 0 18px;
+      color:#4f4c46;
+      font-size:14px;
+      font-weight:700
+    }
+
+    .project-details{
+      display:grid;
+      gap:0;
+      margin:0 0 16px;
+      border-top:1px solid var(--line)
+    }
 
     .project-details div{
       display:grid;
@@ -127,8 +225,16 @@
       font-size:13px
     }
 
-    .project-details dt{font-weight:800;color:#77736a}
-    .project-details dd{margin:0;color:#292824;overflow-wrap:anywhere}
+    .project-details dt{
+      font-weight:800;
+      color:#77736a
+    }
+
+    .project-details dd{
+      margin:0;
+      color:#292824;
+      overflow-wrap:anywhere
+    }
 
     .project-extra{
       margin:0 0 16px;
@@ -140,9 +246,22 @@
       line-height:1.65
     }
 
-    .project-actions{display:grid;gap:10px;margin-top:auto}
-    .project-apply{width:100%;min-height:52px}
-    .project-instagram{width:100%;min-height:48px;background:#fff}
+    .project-actions{
+      display:grid;
+      gap:10px;
+      margin-top:auto
+    }
+
+    .project-apply{
+      width:100%;
+      min-height:52px
+    }
+
+    .project-instagram{
+      width:100%;
+      min-height:48px;
+      background:#fff
+    }
 
     .projects-message{
       grid-column:1/-1;
@@ -161,71 +280,65 @@
       font-size:18px
     }
 
-    .projects-register{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:28px;
-      margin-top:28px;
-      padding:28px 30px;
-      border-radius:26px;
-      background:#181818;
-      color:#fff
+    .projects-footer{
+      margin-top:0
     }
 
-    .projects-register h2{font-size:22px;margin:0 0 4px}
-    .projects-register p{margin:0;color:rgba(255,255,255,.65);font-size:14px}
-    .projects-register .btn{flex:0 0 auto}
-    .projects-footer{margin-top:0}
-
     @media(max-width:900px){
-      .projects-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .projects-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr))
+      }
     }
 
     @media(max-width:620px){
-      .projects-head{padding:36px 0 24px}
-      .projects-head-inner{align-items:flex-start;flex-direction:column;gap:18px}
-      .projects-head h1{font-size:40px;margin-top:14px}
-      .projects-head p{font-size:15px}
-      .projects-count{padding:12px 16px}
-      .projects-grid{grid-template-columns:1fr}
-      .projects-notice{align-items:flex-start;flex-direction:column;gap:4px}
-      .project-image{height:190px}
-      .projects-register{align-items:stretch;flex-direction:column;padding:24px 20px}
-      .projects-register .btn{width:100%}
+      .projects-head{
+        padding:36px 0 24px
+      }
+
+      .projects-head-inner{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:18px
+      }
+
+      .projects-head h1{
+        font-size:40px;
+        margin-top:14px
+      }
+
+      .projects-head p{
+        font-size:15px
+      }
+
+      .projects-count{
+        padding:12px 16px
+      }
+
+      .projects-grid{
+        grid-template-columns:1fr
+      }
+
+      .projects-notice{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:4px
+      }
+
+      .project-image{
+        height:190px
+      }
     }
   </style>
 </head>
 
 <body>
-  <header class="header">
-    <div class="container nav">
-      <a class="brand" href="index.html">
+  <header class="projects-simple-header">
+    <div class="container">
+      <div class="brand">
         <span class="brand-mark">
           <img alt="" src="assets/bee.svg"/>
         </span>
         <span>ミツカル</span>
-      </a>
-
-      <nav class="nav-links">
-        <a href="business.html">企業・店舗向け</a>
-        <a href="creator.html">クリエイター向け</a>
-        <a href="safety.html">安心への取り組み</a>
-        <a href="faq.html">よくある質問</a>
-        <a href="about.html">運営について</a>
-      </nav>
-
-      <div class="nav-actions">
-        <a class="btn" href="creator.html">ご利用ガイド</a>
-
-        <a
-          class="btn btn-primary"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeLlaDevNFRtnfZuoD50xiHE8_TxGMW-N-nRRHMCuosI9wD6Q/viewform"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          無料登録
-        </a>
       </div>
     </div>
   </header>
@@ -254,9 +367,7 @@
       <div class="container">
         <div class="projects-notice">
           <strong>応募前にご確認ください</strong>
-          <span>
-            応募にはミツカルのクリエイターIDが必要です。応募多数の場合は店舗様による選考となります。
-          </span>
+          <span>応募多数の場合は、店舗様による選考となります。</span>
         </div>
 
         <div class="projects-grid" id="projects-grid" aria-live="polite">
@@ -264,22 +375,6 @@
             <strong>案件情報を読み込んでいます</strong>
             <span>少々お待ちください。</span>
           </div>
-        </div>
-
-        <div class="projects-register">
-          <div>
-            <h2>まだクリエイター登録がお済みでない方へ</h2>
-            <p>無料登録後、募集中の案件へ応募できます。</p>
-          </div>
-
-          <a
-            class="btn btn-accent"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeLlaDevNFRtnfZuoD50xiHE8_TxGMW-N-nRRHMCuosI9wD6Q/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            クリエイター登録へ
-          </a>
         </div>
       </div>
     </section>
@@ -289,10 +384,6 @@
     <div class="container">
       <div class="copyright">
         <span>© <span data-year></span> Mitscal.</span>
-        <span>
-          <a href="privacy.html">プライバシーポリシー</a> ·
-          <a href="terms.html">利用規約</a>
-        </span>
       </div>
     </div>
   </footer>
@@ -392,7 +483,11 @@
       function isSafeHttpURL(value) {
         try {
           const url = new URL(value);
-          return url.protocol === "https:" || url.protocol === "http:";
+
+          return (
+            url.protocol === "https:" ||
+            url.protocol === "http:"
+          );
         } catch (_) {
           return false;
         }
@@ -556,7 +651,9 @@
             throw new Error(`HTTP ${response.status}`);
           }
 
-          const projects = toRecords(await response.text());
+          const projects = toRecords(
+            await response.text()
+          );
 
           count.textContent = projects.length;
 
@@ -565,6 +662,7 @@
               "現在募集中の案件はありません",
               "新しい案件が掲載されるまでお待ちください。"
             );
+
             return;
           }
 
@@ -572,7 +670,10 @@
             ...projects.map(createCard)
           );
         } catch (error) {
-          console.error("Failed to load projects:", error);
+          console.error(
+            "Failed to load projects:",
+            error
+          );
 
           count.textContent = "—";
 
