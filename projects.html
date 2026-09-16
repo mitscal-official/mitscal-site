@@ -13,47 +13,175 @@
   <meta property="og:url" content="https://www.mitscal.jp/projects.html"/>
   <link href="assets/styles.css" rel="stylesheet"/>
   <link href="assets/bee.svg" rel="icon"/>
+
   <style>
     .projects-page{min-height:70vh}
     .projects-head{padding:58px 0 34px;background:linear-gradient(180deg,#fff9df 0%,rgba(251,251,248,0) 100%)}
     .projects-head-inner{display:flex;align-items:flex-end;justify-content:space-between;gap:32px}
     .projects-head h1{font-size:clamp(38px,6vw,64px);margin:18px 0 12px;letter-spacing:-.055em}
     .projects-head p{margin:0;color:var(--muted);font-size:17px}
-    .projects-count{display:flex;align-items:baseline;gap:8px;padding:16px 20px;border:1px solid #f2dea0;border-radius:20px;background:rgba(255,255,255,.82);white-space:nowrap}
+
+    .projects-count{
+      display:flex;
+      align-items:baseline;
+      gap:8px;
+      padding:16px 20px;
+      border:1px solid #f2dea0;
+      border-radius:20px;
+      background:rgba(255,255,255,.82);
+      white-space:nowrap
+    }
+
     .projects-count strong{font-size:34px;line-height:1;letter-spacing:-.05em}
     .projects-count span{font-size:14px;font-weight:800;color:#6b5a20}
     .projects-list-section{padding:22px 0 70px}
-    .projects-notice{display:flex;align-items:center;gap:16px;margin-bottom:22px;padding:16px 18px;border:1px solid var(--line);border-radius:18px;background:#fff}
+
+    .projects-notice{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-bottom:22px;
+      padding:16px 18px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:#fff
+    }
+
     .projects-notice strong{white-space:nowrap;font-size:14px}
     .projects-notice span{color:var(--muted);font-size:13px}
     .projects-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-    .project-card{display:flex;flex-direction:column;overflow:hidden;border:1px solid var(--line);border-radius:26px;background:#fff;box-shadow:0 12px 36px rgba(25,25,20,.055)}
+
+    .project-card{
+      display:flex;
+      flex-direction:column;
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:26px;
+      background:#fff;
+      box-shadow:0 12px 36px rgba(25,25,20,.055)
+    }
+
     .project-image{height:210px;position:relative;overflow:hidden}
     .project-image-photo img{width:100%;height:100%;object-fit:cover;object-position:center}
-    .project-status{position:absolute;left:16px;top:16px;padding:7px 11px;border-radius:999px;background:#181818;color:#fff;font-size:12px;font-weight:800;box-shadow:0 6px 18px rgba(0,0,0,.16)}
-    .project-image-brand{display:grid;place-items:center;text-align:center;color:#fff;background:linear-gradient(145deg,#d9ad27,#6f5916)}
-    .project-image-brand:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 72% 22%,rgba(255,255,255,.25),transparent 34%)}
-    .project-image-brand>div{position:relative;display:grid;gap:5px;place-items:center}
-    .project-image-brand>div span{display:grid;place-items:center;width:88px;height:88px;border:1px solid rgba(255,255,255,.52);border-radius:50%;font-family:serif;font-size:38px;line-height:1}
+
+    .project-status{
+      position:absolute;
+      left:16px;
+      top:16px;
+      padding:7px 11px;
+      border-radius:999px;
+      background:#181818;
+      color:#fff;
+      font-size:12px;
+      font-weight:800;
+      box-shadow:0 6px 18px rgba(0,0,0,.16)
+    }
+
+    .project-image-brand{
+      display:grid;
+      place-items:center;
+      text-align:center;
+      color:#fff;
+      background:linear-gradient(145deg,#d9ad27,#6f5916)
+    }
+
+    .project-image-brand:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:radial-gradient(circle at 72% 22%,rgba(255,255,255,.25),transparent 34%)
+    }
+
+    .project-image-brand>div{
+      position:relative;
+      display:grid;
+      gap:5px;
+      place-items:center
+    }
+
+    .project-image-brand>div span{
+      display:grid;
+      place-items:center;
+      width:88px;
+      height:88px;
+      border:1px solid rgba(255,255,255,.52);
+      border-radius:50%;
+      font-family:serif;
+      font-size:38px;
+      line-height:1
+    }
+
     .project-image-brand small{font-size:11px;font-weight:800;letter-spacing:.12em}
     .project-body{display:flex;flex:1;flex-direction:column;padding:22px}
     .project-id{font-size:12px;font-weight:800;color:#8c887f;letter-spacing:.04em}
     .project-body h2{font-size:22px;line-height:1.35;margin:7px 0 2px;letter-spacing:-.03em}
     .project-title{margin:0 0 18px;color:#4f4c46;font-size:14px;font-weight:700}
     .project-details{display:grid;gap:0;margin:0 0 16px;border-top:1px solid var(--line)}
-    .project-details div{display:grid;grid-template-columns:78px 1fr;gap:9px;padding:10px 0;border-bottom:1px solid var(--line);font-size:13px}
+
+    .project-details div{
+      display:grid;
+      grid-template-columns:78px 1fr;
+      gap:9px;
+      padding:10px 0;
+      border-bottom:1px solid var(--line);
+      font-size:13px
+    }
+
     .project-details dt{font-weight:800;color:#77736a}
     .project-details dd{margin:0;color:#292824;overflow-wrap:anywhere}
-    .project-extra{margin:0 0 16px;padding:12px 13px;border-radius:14px;background:#fff8db;color:#65551e;font-size:12px;line-height:1.65}
-    .project-apply{width:100%;min-height:52px;margin-top:auto}
-    .projects-message{grid-column:1/-1;padding:42px 24px;border:1px solid var(--line);border-radius:24px;background:#fff;text-align:center;color:var(--muted)}
-    .projects-message strong{display:block;margin-bottom:6px;color:var(--ink);font-size:18px}
-    .projects-register{display:flex;align-items:center;justify-content:space-between;gap:28px;margin-top:28px;padding:28px 30px;border-radius:26px;background:#181818;color:#fff}
+
+    .project-extra{
+      margin:0 0 16px;
+      padding:12px 13px;
+      border-radius:14px;
+      background:#fff8db;
+      color:#65551e;
+      font-size:12px;
+      line-height:1.65
+    }
+
+    .project-actions{display:grid;gap:10px;margin-top:auto}
+    .project-apply{width:100%;min-height:52px}
+    .project-instagram{width:100%;min-height:48px;background:#fff}
+
+    .projects-message{
+      grid-column:1/-1;
+      padding:42px 24px;
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:#fff;
+      text-align:center;
+      color:var(--muted)
+    }
+
+    .projects-message strong{
+      display:block;
+      margin-bottom:6px;
+      color:var(--ink);
+      font-size:18px
+    }
+
+    .projects-register{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:28px;
+      margin-top:28px;
+      padding:28px 30px;
+      border-radius:26px;
+      background:#181818;
+      color:#fff
+    }
+
     .projects-register h2{font-size:22px;margin:0 0 4px}
     .projects-register p{margin:0;color:rgba(255,255,255,.65);font-size:14px}
     .projects-register .btn{flex:0 0 auto}
     .projects-footer{margin-top:0}
-    @media(max-width:900px){.projects-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+    @media(max-width:900px){
+      .projects-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+
     @media(max-width:620px){
       .projects-head{padding:36px 0 24px}
       .projects-head-inner{align-items:flex-start;flex-direction:column;gap:18px}
@@ -68,13 +196,17 @@
     }
   </style>
 </head>
+
 <body>
   <header class="header">
     <div class="container nav">
       <a class="brand" href="index.html">
-        <span class="brand-mark"><img alt="" src="assets/bee.svg"/></span>
+        <span class="brand-mark">
+          <img alt="" src="assets/bee.svg"/>
+        </span>
         <span>ミツカル</span>
       </a>
+
       <nav class="nav-links">
         <a href="business.html">企業・店舗向け</a>
         <a href="creator.html">クリエイター向け</a>
@@ -82,9 +214,18 @@
         <a href="faq.html">よくある質問</a>
         <a href="about.html">運営について</a>
       </nav>
+
       <div class="nav-actions">
         <a class="btn" href="creator.html">ご利用ガイド</a>
-        <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeLlaDevNFRtnfZuoD50xiHE8_TxGMW-N-nRRHMCuosI9wD6Q/viewform" target="_blank" rel="noopener noreferrer">無料登録</a>
+
+        <a
+          class="btn btn-primary"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeLlaDevNFRtnfZuoD50xiHE8_TxGMW-N-nRRHMCuosI9wD6Q/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          無料登録
+        </a>
       </div>
     </div>
   </header>
@@ -93,10 +234,15 @@
     <section class="projects-head">
       <div class="container projects-head-inner">
         <div>
-          <span class="eyebrow"><span class="eyebrow-dot"></span>PR PROJECTS</span>
+          <span class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            PR PROJECTS
+          </span>
+
           <h1>募集中のPR案件</h1>
           <p>内容と来店条件を確認して、気になる案件へご応募ください。</p>
         </div>
+
         <div class="projects-count" aria-label="募集中の案件数">
           <strong id="project-count">—</strong>
           <span>件募集中</span>
@@ -108,7 +254,9 @@
       <div class="container">
         <div class="projects-notice">
           <strong>応募前にご確認ください</strong>
-          <span>応募にはミツカルのクリエイターIDが必要です。応募多数の場合は店舗様による選考となります。</span>
+          <span>
+            応募にはミツカルのクリエイターIDが必要です。応募多数の場合は店舗様による選考となります。
+          </span>
         </div>
 
         <div class="projects-grid" id="projects-grid" aria-live="polite">
@@ -123,7 +271,15 @@
             <h2>まだクリエイター登録がお済みでない方へ</h2>
             <p>無料登録後、募集中の案件へ応募できます。</p>
           </div>
-          <a class="btn btn-accent" href="https://docs.google.com/forms/d/e/1FAIpQLSeLlaDevNFRtnfZuoD50xiHE8_TxGMW-N-nRRHMCuosI9wD6Q/viewform" target="_blank" rel="noopener noreferrer">クリエイター登録へ</a>
+
+          <a
+            class="btn btn-accent"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeLlaDevNFRtnfZuoD50xiHE8_TxGMW-N-nRRHMCuosI9wD6Q/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            クリエイター登録へ
+          </a>
         </div>
       </div>
     </section>
@@ -133,16 +289,21 @@
     <div class="container">
       <div class="copyright">
         <span>© <span data-year></span> Mitscal.</span>
-        <span><a href="privacy.html">プライバシーポリシー</a> · <a href="terms.html">利用規約</a></span>
+        <span>
+          <a href="privacy.html">プライバシーポリシー</a> ·
+          <a href="terms.html">利用規約</a>
+        </span>
       </div>
     </div>
   </footer>
 
   <script src="assets/app.js"></script>
+
   <script>
     (() => {
       const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRtc3UvvBtpP0GiP4Hx_5jbghHOvCduRAISwEHmWN8iQtipQrl6flzt2CBfZgvcqpNYGFG9gn04FOcf/pub?gid=331292356&single=true&output=csv";
       const APPLY_URL = "https://forms.gle/jaUa3FaMk8zSzWGn6";
+
       const grid = document.getElementById("projects-grid");
       const count = document.getElementById("project-count");
 
@@ -165,9 +326,16 @@
             row.push(value);
             value = "";
           } else if ((char === "\n" || char === "\r") && !quoted) {
-            if (char === "\r" && next === "\n") i += 1;
+            if (char === "\r" && next === "\n") {
+              i += 1;
+            }
+
             row.push(value);
-            if (row.some(cell => cell.trim() !== "")) rows.push(row);
+
+            if (row.some(cell => cell.trim() !== "")) {
+              rows.push(row);
+            }
+
             row = [];
             value = "";
           } else {
@@ -176,31 +344,52 @@
         }
 
         row.push(value);
-        if (row.some(cell => cell.trim() !== "")) rows.push(row);
+
+        if (row.some(cell => cell.trim() !== "")) {
+          rows.push(row);
+        }
+
         return rows;
       }
 
       function toRecords(text) {
         const rows = parseCSV(text.replace(/^\uFEFF/, ""));
-        if (rows.length < 2) return [];
+
+        if (rows.length < 2) {
+          return [];
+        }
+
         const headers = rows.shift().map(header => header.trim());
+
         return rows
-          .map(row => Object.fromEntries(headers.map((header, index) => [header, (row[index] || "").trim()])))
+          .map(row =>
+            Object.fromEntries(
+              headers.map((header, index) => [
+                header,
+                (row[index] || "").trim()
+              ])
+            )
+          )
           .filter(item => item["案件ID"]);
       }
 
       function addDetail(list, label, value) {
-        if (!value) return;
+        if (!value) {
+          return;
+        }
+
         const wrap = document.createElement("div");
         const term = document.createElement("dt");
         const description = document.createElement("dd");
+
         term.textContent = label;
         description.textContent = value;
+
         wrap.append(term, description);
         list.append(wrap);
       }
 
-      function isSafeImageURL(value) {
+      function isSafeHttpURL(value) {
         try {
           const url = new URL(value);
           return url.protocol === "https:" || url.protocol === "http:";
@@ -212,28 +401,47 @@
       function createPlaceholder(storeName) {
         const image = document.createElement("div");
         image.className = "project-image project-image-brand";
+
         const mark = document.createElement("div");
         const initial = document.createElement("span");
         const label = document.createElement("small");
-        initial.textContent = (storeName || "PR").trim().slice(0, 1).toUpperCase();
+
+        initial.textContent = (storeName || "PR")
+          .trim()
+          .slice(0, 1)
+          .toUpperCase();
+
         label.textContent = "MITSUCAL PROJECT";
+
         mark.append(initial, label);
         image.append(mark);
+
         return image;
       }
 
       function createImage(item) {
         const url = item["画像URL"];
-        if (!isSafeImageURL(url)) return createPlaceholder(item["店舗・企業名"]);
+
+        if (!isSafeHttpURL(url)) {
+          return createPlaceholder(item["店舗・企業名"]);
+        }
 
         const image = document.createElement("div");
         image.className = "project-image project-image-photo";
+
         const photo = document.createElement("img");
         photo.src = url;
         photo.alt = `${item["店舗・企業名"] || "掲載店舗"}の案件画像`;
         photo.loading = "lazy";
-        photo.addEventListener("error", () => image.replaceWith(createPlaceholder(item["店舗・企業名"])));
+
+        photo.addEventListener("error", () => {
+          image.replaceWith(
+            createPlaceholder(item["店舗・企業名"])
+          );
+        });
+
         image.append(photo);
+
         return image;
       }
 
@@ -242,9 +450,11 @@
         card.className = "project-card";
 
         const image = createImage(item);
+
         const status = document.createElement("span");
         status.className = "project-status";
         status.textContent = "応募受付中";
+
         image.append(status);
 
         const body = document.createElement("div");
@@ -263,11 +473,17 @@
 
         const details = document.createElement("dl");
         details.className = "project-details";
+
+        addDetail(details, "住所", item["店舗住所"]);
         addDetail(details, "提供", item["提供内容・報酬"]);
         addDetail(details, "募集締切", item["募集締切"]);
         addDetail(details, "来店条件", item["来店可能期間・曜日・時間"]);
         addDetail(details, "投稿", item["投稿形式"]);
-        const people = item["募集人数"] ? `${item["募集人数"].replace(/名$/, "")}名` : "";
+
+        const people = item["募集人数"]
+          ? `${item["募集人数"].replace(/名$/, "")}名`
+          : "";
+
         addDetail(details, "募集人数", people);
 
         body.append(id, store, title, details);
@@ -276,50 +492,94 @@
           const extra = document.createElement("p");
           extra.className = "project-extra";
           extra.textContent = item["その他・事前共有事項"];
+
           body.append(extra);
         }
 
+        const actions = document.createElement("div");
+        actions.className = "project-actions";
+
+        const instagramURL = item["店舗Instagram URL"];
+
+        if (isSafeHttpURL(instagramURL)) {
+          const instagram = document.createElement("a");
+
+          instagram.className = "btn project-instagram";
+          instagram.href = instagramURL;
+          instagram.target = "_blank";
+          instagram.rel = "noopener noreferrer";
+          instagram.textContent = "店舗のInstagramを見る";
+
+          actions.append(instagram);
+        }
+
         const apply = document.createElement("a");
+
         apply.className = "btn btn-primary project-apply";
         apply.href = APPLY_URL;
         apply.target = "_blank";
         apply.rel = "noopener noreferrer";
         apply.textContent = "この案件に応募する";
-        body.append(apply);
+
+        actions.append(apply);
+        body.append(actions);
 
         card.append(image, body);
+
         return card;
       }
 
       function showMessage(title, message) {
         grid.replaceChildren();
+
         const box = document.createElement("div");
         box.className = "projects-message";
+
         const heading = document.createElement("strong");
         const text = document.createElement("span");
+
         heading.textContent = title;
         text.textContent = message;
+
         box.append(heading, text);
         grid.append(box);
       }
 
       async function loadProjects() {
         try {
-          const response = await fetch(`${CSV_URL}&_=${Date.now()}`, { cache: "no-store" });
-          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          const response = await fetch(
+            `${CSV_URL}&_=${Date.now()}`,
+            { cache: "no-store" }
+          );
+
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+          }
+
           const projects = toRecords(await response.text());
+
           count.textContent = projects.length;
 
           if (!projects.length) {
-            showMessage("現在募集中の案件はありません", "新しい案件が掲載されるまでお待ちください。");
+            showMessage(
+              "現在募集中の案件はありません",
+              "新しい案件が掲載されるまでお待ちください。"
+            );
             return;
           }
 
-          grid.replaceChildren(...projects.map(createCard));
+          grid.replaceChildren(
+            ...projects.map(createCard)
+          );
         } catch (error) {
           console.error("Failed to load projects:", error);
+
           count.textContent = "—";
-          showMessage("案件情報を読み込めませんでした", "時間をおいてから、ページを再読み込みしてください。");
+
+          showMessage(
+            "案件情報を読み込めませんでした",
+            "時間をおいてから、ページを再読み込みしてください。"
+          );
         }
       }
 
