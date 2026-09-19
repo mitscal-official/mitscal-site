@@ -22,402 +22,72 @@
     .projects-head-inner{display:flex;align-items:flex-end;justify-content:space-between;gap:32px}
     .projects-head h1{font-size:clamp(38px,6vw,64px);margin:18px 0 12px;letter-spacing:-.055em}
     .projects-head p{margin:0;color:var(--muted);font-size:17px}
-
-    .projects-count{
-      display:flex;
-      align-items:baseline;
-      gap:8px;
-      padding:16px 20px;
-      border:1px solid #f2dea0;
-      border-radius:20px;
-      background:rgba(255,255,255,.82);
-      white-space:nowrap
-    }
-
+    .projects-count{display:flex;align-items:baseline;gap:8px;padding:16px 20px;border:1px solid #f2dea0;border-radius:20px;background:rgba(255,255,255,.82);white-space:nowrap}
     .projects-count strong{font-size:34px;line-height:1;letter-spacing:-.05em}
     .projects-count span{font-size:14px;font-weight:800;color:#6b5a20}
     .projects-list-section{padding:22px 0 70px}
-
-    .projects-notice{
-      display:flex;
-      align-items:center;
-      gap:16px;
-      margin-bottom:22px;
-      padding:16px 18px;
-      border:1px solid var(--line);
-      border-radius:18px;
-      background:#fff
-    }
-
+    .projects-notice{display:flex;align-items:center;gap:16px;margin-bottom:22px;padding:16px 18px;border:1px solid var(--line);border-radius:18px;background:#fff}
     .projects-notice strong{white-space:nowrap;font-size:14px}
     .projects-notice span{color:var(--muted);font-size:13px}
-
-    .application-guide{
-      margin-bottom:26px;
-      padding:22px;
-      border:1px solid var(--line);
-      border-radius:24px;
-      background:#fff;
-      box-shadow:0 10px 30px rgba(25,25,20,.04)
-    }
-
-    .application-guide-head{
-      display:flex;
-      align-items:baseline;
-      justify-content:space-between;
-      gap:16px;
-      margin-bottom:18px
-    }
-
-    .application-guide-head h2{
-      margin:0;
-      font-size:20px;
-      letter-spacing:-.03em
-    }
-
-    .application-guide-head span{
-      color:#8a6b12;
-      font-size:12px;
-      font-weight:800
-    }
-
-    .application-steps{
-      display:grid;
-      grid-template-columns:repeat(6,minmax(0,1fr));
-      gap:10px;
-      margin:0;
-      padding:0;
-      list-style:none
-    }
-
-    .application-steps li{
-      position:relative;
-      min-width:0;
-      padding:14px 12px;
-      border-radius:16px;
-      background:#faf9f5
-    }
-
-    .application-step-number{
-      display:grid;
-      place-items:center;
-      width:26px;
-      height:26px;
-      margin-bottom:9px;
-      border-radius:50%;
-      background:#f4c928;
-      color:#181818;
-      font-size:12px;
-      font-weight:900
-    }
-
-    .application-steps strong{
-      display:block;
-      margin-bottom:4px;
-      font-size:13px
-    }
-
-    .application-steps p{
-      margin:0;
-      color:var(--muted);
-      font-size:11px;
-      line-height:1.55
-    }
-
-    .application-rules{
-      margin-top:14px;
-      border:1px solid #eadca9;
-      border-radius:16px;
-      background:#fffdf5
-    }
-
-    .application-rules summary{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      padding:14px 16px;
-      cursor:pointer;
-      color:#5e501f;
-      font-size:13px;
-      font-weight:800;
-      list-style:none
-    }
-
-    .application-rules summary::-webkit-details-marker{
-      display:none
-    }
-
-    .application-rules summary:after{
-      content:"＋";
-      font-size:18px;
-      line-height:1
-    }
-
-    .application-rules[open] summary:after{
-      content:"−"
-    }
-
-    .application-rules ul{
-      display:grid;
-      gap:7px;
-      margin:0;
-      padding:0 18px 16px 34px;
-      color:#5d5a52;
-      font-size:12px;
-      line-height:1.65
-    }
-
-    .projects-grid{
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:20px
-    }
-
-    .project-card{
-      display:flex;
-      flex-direction:column;
-      overflow:hidden;
-      border:1px solid var(--line);
-      border-radius:26px;
-      background:#fff;
-      box-shadow:0 12px 36px rgba(25,25,20,.055)
-    }
-
-    .project-image{
-      height:210px;
-      position:relative;
-      overflow:hidden
-    }
-
-    .project-image-photo img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      object-position:center
-    }
-
-    .project-status{
-      position:absolute;
-      left:16px;
-      top:16px;
-      padding:7px 11px;
-      border-radius:999px;
-      background:#181818;
-      color:#fff;
-      font-size:12px;
-      font-weight:800;
-      box-shadow:0 6px 18px rgba(0,0,0,.16)
-    }
-
-    .project-image-brand{
-      display:grid;
-      place-items:center;
-      text-align:center;
-      color:#fff;
-      background:linear-gradient(145deg,#d9ad27,#6f5916)
-    }
-
-    .project-image-brand:before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:radial-gradient(circle at 72% 22%,rgba(255,255,255,.25),transparent 34%)
-    }
-
-    .project-image-brand>div{
-      position:relative;
-      display:grid;
-      gap:5px;
-      place-items:center
-    }
-
-    .project-image-brand>div span{
-      display:grid;
-      place-items:center;
-      width:88px;
-      height:88px;
-      border:1px solid rgba(255,255,255,.52);
-      border-radius:50%;
-      font-family:serif;
-      font-size:38px;
-      line-height:1
-    }
-
-    .project-image-brand small{
-      font-size:11px;
-      font-weight:800;
-      letter-spacing:.12em
-    }
-
-    .project-body{
-      display:flex;
-      flex:1;
-      flex-direction:column;
-      padding:22px
-    }
-
-    .project-id{
-      font-size:12px;
-      font-weight:800;
-      color:#8c887f;
-      letter-spacing:.04em
-    }
-
-    .project-body h2{
-      font-size:22px;
-      line-height:1.35;
-      margin:7px 0 2px;
-      letter-spacing:-.03em
-    }
-
-    .project-title{
-      margin:0 0 18px;
-      color:#4f4c46;
-      font-size:14px;
-      font-weight:700
-    }
-
-    .project-details{
-      display:grid;
-      gap:0;
-      margin:0 0 16px;
-      border-top:1px solid var(--line)
-    }
-
-    .project-details div{
-      display:grid;
-      grid-template-columns:78px 1fr;
-      gap:9px;
-      padding:10px 0;
-      border-bottom:1px solid var(--line);
-      font-size:13px
-    }
-
-    .project-details dt{
-      font-weight:800;
-      color:#77736a
-    }
-
-    .project-details dd{
-      margin:0;
-      color:#292824;
-      overflow-wrap:anywhere
-    }
-
-    .project-extra{
-      margin:0 0 16px;
-      padding:12px 13px;
-      border-radius:14px;
-      background:#fff8db;
-      color:#65551e;
-      font-size:12px;
-      line-height:1.65
-    }
-
-    .project-actions{
-      display:grid;
-      gap:10px;
-      margin-top:auto
-    }
-
-    .project-apply{
-      width:100%;
-      min-height:52px
-    }
-
-    .project-instagram{
-      width:100%;
-      min-height:48px;
-      background:#fff
-    }
-
-    .projects-message{
-      grid-column:1/-1;
-      padding:42px 24px;
-      border:1px solid var(--line);
-      border-radius:24px;
-      background:#fff;
-      text-align:center;
-      color:var(--muted)
-    }
-
-    .projects-message strong{
-      display:block;
-      margin-bottom:6px;
-      color:var(--ink);
-      font-size:18px
-    }
-
+    .application-guide{margin-bottom:26px;padding:22px;border:1px solid var(--line);border-radius:24px;background:#fff;box-shadow:0 10px 30px rgba(25,25,20,.04)}
+    .application-guide-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:18px}
+    .application-guide-head h2{margin:0;font-size:20px;letter-spacing:-.03em}
+    .application-guide-head span{color:#8a6b12;font-size:12px;font-weight:800}
+    .application-steps{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none}
+    .application-steps li{position:relative;min-width:0;padding:14px 12px;border-radius:16px;background:#faf9f5}
+    .application-step-number{display:grid;place-items:center;width:26px;height:26px;margin-bottom:9px;border-radius:50%;background:#f4c928;color:#181818;font-size:12px;font-weight:900}
+    .application-steps strong{display:block;margin-bottom:4px;font-size:13px}
+    .application-steps p{margin:0;color:var(--muted);font-size:11px;line-height:1.55}
+    .application-rules{margin-top:14px;border:1px solid #eadca9;border-radius:16px;background:#fffdf5}
+    .application-rules summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;cursor:pointer;color:#5e501f;font-size:13px;font-weight:800;list-style:none}
+    .application-rules summary::-webkit-details-marker{display:none}
+    .application-rules summary:after{content:"＋";font-size:18px;line-height:1}
+    .application-rules[open] summary:after{content:"−"}
+    .application-rules ul{display:grid;gap:7px;margin:0;padding:0 18px 16px 34px;color:#5d5a52;font-size:12px;line-height:1.65}
+    .projects-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .project-card{display:flex;flex-direction:column;overflow:hidden;border:1px solid var(--line);border-radius:26px;background:#fff;box-shadow:0 12px 36px rgba(25,25,20,.055)}
+    .project-image{height:210px;position:relative;overflow:hidden}
+    .project-image-photo img{width:100%;height:100%;object-fit:cover;object-position:center}
+    .project-status{position:absolute;left:16px;top:16px;padding:7px 11px;border-radius:999px;background:#181818;color:#fff;font-size:12px;font-weight:800;box-shadow:0 6px 18px rgba(0,0,0,.16)}
+    .project-image-brand{display:grid;place-items:center;text-align:center;color:#fff;background:linear-gradient(145deg,#d9ad27,#6f5916)}
+    .project-image-brand:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 72% 22%,rgba(255,255,255,.25),transparent 34%)}
+    .project-image-brand>div{position:relative;display:grid;gap:5px;place-items:center}
+    .project-image-brand>div span{display:grid;place-items:center;width:88px;height:88px;border:1px solid rgba(255,255,255,.52);border-radius:50%;font-family:serif;font-size:38px;line-height:1}
+    .project-image-brand small{font-size:11px;font-weight:800;letter-spacing:.12em}
+    .project-body{display:flex;flex:1;flex-direction:column;padding:22px}
+    .project-id{font-size:12px;font-weight:800;color:#8c887f;letter-spacing:.04em}
+    .project-body h2{font-size:22px;line-height:1.35;margin:7px 0 2px;letter-spacing:-.03em}
+    .project-title{margin:0 0 18px;color:#4f4c46;font-size:14px;font-weight:700}
+    .project-details{display:grid;gap:0;margin:0 0 16px;border-top:1px solid var(--line)}
+    .project-details div{display:grid;grid-template-columns:78px 1fr;gap:9px;padding:10px 0;border-bottom:1px solid var(--line);font-size:13px}
+    .project-details dt{font-weight:800;color:#77736a}
+    .project-details dd{margin:0;color:#292824;overflow-wrap:anywhere}
+    .project-extra{margin:0 0 16px;padding:12px 13px;border-radius:14px;background:#fff8db;color:#65551e;font-size:12px;line-height:1.65}
+    .project-actions{display:grid;gap:10px;margin-top:auto}
+    .project-apply{width:100%;min-height:52px}
+    .project-instagram{width:100%;min-height:48px;background:#fff}
+    .projects-message{grid-column:1/-1;padding:42px 24px;border:1px solid var(--line);border-radius:24px;background:#fff;text-align:center;color:var(--muted)}
+    .projects-message strong{display:block;margin-bottom:6px;color:var(--ink);font-size:18px}
     .projects-footer{margin-top:0}
 
     @media(max-width:900px){
-      .projects-grid{
-        grid-template-columns:repeat(2,minmax(0,1fr))
-      }
-
-      .application-steps{
-        grid-template-columns:repeat(3,minmax(0,1fr))
-      }
+      .projects-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .application-steps{grid-template-columns:repeat(3,minmax(0,1fr))}
     }
 
     @media(max-width:620px){
-      .projects-head{
-        padding:36px 0 24px
-      }
-
-      .projects-head-inner{
-        align-items:flex-start;
-        flex-direction:column;
-        gap:18px
-      }
-
-      .projects-head h1{
-        font-size:40px;
-        margin-top:14px
-      }
-
-      .projects-head p{
-        font-size:15px
-      }
-
-      .projects-count{
-        padding:12px 16px
-      }
-
-      .projects-grid{
-        grid-template-columns:1fr
-      }
-
-      .projects-notice{
-        align-items:flex-start;
-        flex-direction:column;
-        gap:4px
-      }
-
-      .application-guide{
-        padding:18px 14px;
-        border-radius:20px
-      }
-
-      .application-guide-head{
-        align-items:flex-start;
-        flex-direction:column;
-        gap:4px
-      }
-
-      .application-steps{
-        grid-template-columns:repeat(2,minmax(0,1fr));
-        gap:8px
-      }
-
-      .application-steps li{
-        padding:12px 10px
-      }
-
-      .project-image{
-        height:190px
-      }
+      .projects-head{padding:36px 0 24px}
+      .projects-head-inner{align-items:flex-start;flex-direction:column;gap:18px}
+      .projects-head h1{font-size:40px;margin-top:14px}
+      .projects-head p{font-size:15px}
+      .projects-count{padding:12px 16px}
+      .projects-grid{grid-template-columns:1fr}
+      .projects-notice{align-items:flex-start;flex-direction:column;gap:4px}
+      .application-guide{padding:18px 14px;border-radius:20px}
+      .application-guide-head{align-items:flex-start;flex-direction:column;gap:4px}
+      .application-steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+      .application-steps li{padding:12px 10px}
+      .project-image{height:190px}
     }
   </style>
 </head>
@@ -444,7 +114,10 @@
           </span>
 
           <h1>募集中のPR案件</h1>
-          <p>内容と来店条件を確認して、気になる案件へご応募ください。</p>
+
+          <p>
+            内容と来店条件を確認して、気になる案件へご応募ください。
+          </p>
         </div>
 
         <div class="projects-count" aria-label="募集中の案件数">
@@ -456,6 +129,7 @@
 
     <section class="projects-list-section">
       <div class="container">
+
         <div class="projects-notice">
           <strong>応募前にご確認ください</strong>
           <span>
@@ -527,6 +201,7 @@
             <span>少々お待ちください。</span>
           </div>
         </div>
+
       </div>
     </section>
   </main>
@@ -568,9 +243,7 @@
             row.push(value);
             value = "";
           } else if ((char === "\n" || char === "\r") && !quoted) {
-            if (char === "\r" && next === "\n") {
-              i += 1;
-            }
+            if (char === "\r" && next === "\n") i += 1;
 
             row.push(value);
 
@@ -597,9 +270,7 @@
       function toRecords(text) {
         const rows = parseCSV(text.replace(/^\uFEFF/, ""));
 
-        if (rows.length < 2) {
-          return [];
-        }
+        if (rows.length < 2) return [];
 
         const headers = rows.shift().map(header => header.trim());
 
@@ -616,9 +287,7 @@
       }
 
       function addDetail(list, label, value) {
-        if (!value) {
-          return;
-        }
+        if (!value) return;
 
         const wrap = document.createElement("div");
         const term = document.createElement("dt");
@@ -634,11 +303,7 @@
       function isSafeHttpURL(value) {
         try {
           const url = new URL(value);
-
-          return (
-            url.protocol === "https:" ||
-            url.protocol === "http:"
-          );
+          return url.protocol === "https:" || url.protocol === "http:";
         } catch (_) {
           return false;
         }
@@ -652,11 +317,7 @@
         const initial = document.createElement("span");
         const label = document.createElement("small");
 
-        initial.textContent = (storeName || "PR")
-          .trim()
-          .slice(0, 1)
-          .toUpperCase();
-
+        initial.textContent = (storeName || "PR").trim().slice(0, 1).toUpperCase();
         label.textContent = "MITSUCAL PROJECT";
 
         mark.append(initial, label);
@@ -681,9 +342,7 @@
         photo.loading = "lazy";
 
         photo.addEventListener("error", () => {
-          image.replaceWith(
-            createPlaceholder(item["店舗・企業名"])
-          );
+          image.replaceWith(createPlaceholder(item["店舗・企業名"]));
         });
 
         image.append(photo);
@@ -722,6 +381,7 @@
 
         addDetail(details, "住所", item["店舗住所"]);
         addDetail(details, "提供", item["提供内容・報酬"]);
+        addDetail(details, "同伴者", item["同伴者について"]);
         addDetail(details, "募集締切", item["募集締切"]);
         addDetail(details, "来店条件", item["来店可能期間・曜日・時間"]);
         addDetail(details, "投稿", item["投稿形式"]);
@@ -739,7 +399,6 @@
           const extra = document.createElement("p");
           extra.className = "project-extra";
           extra.textContent = item["その他・事前共有事項"];
-
           body.append(extra);
         }
 
@@ -750,7 +409,6 @@
 
         if (isSafeHttpURL(instagramURL)) {
           const instagram = document.createElement("a");
-
           instagram.className = "btn project-instagram";
           instagram.href = instagramURL;
           instagram.target = "_blank";
@@ -761,7 +419,6 @@
         }
 
         const apply = document.createElement("a");
-
         apply.className = "btn btn-primary project-apply";
         apply.href = APPLY_URL;
         apply.target = "_blank";
@@ -803,10 +460,7 @@
             throw new Error(`HTTP ${response.status}`);
           }
 
-          const projects = toRecords(
-            await response.text()
-          );
-
+          const projects = toRecords(await response.text());
           count.textContent = projects.length;
 
           if (!projects.length) {
@@ -818,14 +472,9 @@
             return;
           }
 
-          grid.replaceChildren(
-            ...projects.map(createCard)
-          );
+          grid.replaceChildren(...projects.map(createCard));
         } catch (error) {
-          console.error(
-            "Failed to load projects:",
-            error
-          );
+          console.error("Failed to load projects:", error);
 
           count.textContent = "—";
 
