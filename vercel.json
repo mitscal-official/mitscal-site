@@ -1,0 +1,69 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://mitscal.jp/",
+      "permanent": false
+    },
+    {
+      "source": "/index.html",
+      "destination": "https://mitscal.jp/",
+      "permanent": false
+    },
+    {
+      "source": "/about.html",
+      "destination": "https://mitscal.jp/about",
+      "permanent": false
+    },
+    {
+      "source": "/business.html",
+      "destination": "https://mitscal.jp/for-stores",
+      "permanent": false
+    },
+    {
+      "source": "/creator.html",
+      "destination": "https://mitscal.jp/for-creators",
+      "permanent": false
+    },
+    {
+      "source": "/projects.html",
+      "destination": "https://mitscal.jp/projects",
+      "permanent": false
+    },
+    {
+      "source": "/faq.html",
+      "destination": "https://mitscal.jp/faq",
+      "permanent": false
+    },
+    {
+      "source": "/contact.html",
+      "destination": "https://mitscal.jp/contact",
+      "permanent": false
+    },
+    {
+      "source": "/safety.html",
+      "destination": "https://mitscal.jp/about",
+      "permanent": false
+    },
+    {
+      "source": "/terms.html",
+      "destination": "https://mitscal.jp/terms",
+      "permanent": false
+    },
+    {
+      "source": "/privacy.html",
+      "destination": "https://mitscal.jp/privacy",
+      "permanent": false
+    },
+    {
+      "source": "/store-guide.html",
+      "destination": "https://mitscal.jp/guide/store",
+      "permanent": false
+    },
+    {
+      "source": "/creator-guide.html",
+      "destination": "https://mitscal.jp/guide/creator",
+      "permanent": false
+    }
+  ]
+}
